@@ -1,0 +1,115 @@
+# 📌 TODO (Backlog / Scrum)
+
+Backlog detalhado do projeto **Desaparecidos SPA**, organizado em **Sprints**.  
+Cada Sprint está quebrada em **épicos, histórias de usuário e tarefas técnicas**.
+
+---
+
+## 🟢 Sprint 1 – Estrutura inicial
+
+### Épico: Configuração do ambiente
+**Histórias de usuário:**
+- Como desenvolvedor, quero configurar o ambiente base para iniciar o projeto de forma padronizada.  
+
+**Tarefas técnicas:**
+- [X] Criar projeto com **Vite + React + TypeScript** (`npm create vite@latest desaparecidos-spa`).  
+- [X] Configurar **Tailwind CSS** com `postcss` e `autoprefixer`.  
+- [X] Criar arquivo `tailwind.config.js` e incluir paths do projeto.  
+- [X] Configurar **ESLint + TypeScript** (lint e prettier rules básicas).  
+
+- [X] Criar **Dockerfile** para build e deploy:  
+  - Etapa de build (Node 22)  
+  - Etapa de produção (Nginx ou similar).  
+
+- [X] Criar estrutura de rotas com `react-router-dom` + **lazy loading** (`React.lazy`, `Suspense`).  
+
+- [X] Criar estrutura de pastas:  
+
+    src/
+    components/
+    pages/
+    services/
+    hooks/
+    assets/
+
+---
+
+## 🟡 Sprint 2 – Tela Inicial
+
+### Épico: Listagem de pessoas
+**Histórias de usuário:**
+- Como cidadão, quero visualizar pessoas desaparecidas/localizadas em cards para ter acesso rápido às informações.  
+- Como cidadão, quero buscar por nome ou filtros para encontrar uma ocorrência específica.  
+
+**Tarefas técnicas:**
+- [ ] Criar página **Home** (`/`).  
+- [ ] Criar componente **CardPessoa** (foto, nome, status).  
+- [ ] Criar componente **StatusBadge** (verde para Localizado, vermelho para Desaparecido).  
+- [ ] Criar componente **Pagination** com mínimo de 10 registros por página.  
+- [ ] Criar componente **SearchBar** integrado com a API.  
+- [ ] Criar serviço `api.ts` com **axios** configurado (baseURL, interceptors de erro).  
+- [ ] Integrar **listagem com API real** (`GET /pessoas`).  
+- [ ] Tratar erros de API (mensagens de fallback).  
+
+---
+
+## 🔵 Sprint 3 – Página de Detalhes
+
+### Épico: Visualizar detalhes da ocorrência
+**Histórias de usuário:**
+- Como cidadão, quero visualizar os detalhes de uma ocorrência para ter todas as informações.  
+- Como cidadão, quero entender facilmente o status da pessoa (Desaparecida ou Localizada).  
+
+**Tarefas técnicas:**
+- [ ] Criar página **Detalhes** (`/detalhes/:id`).  
+- [ ] Criar hook `useFetchDetalhePessoa(id)` para buscar dados da API.  
+- [ ] Criar componente **DetalhePessoaCard** (foto, nome, idade, descrição, status, data, contatos).  
+- [ ] Destacar visualmente o **status da pessoa**.  
+- [ ] Tratar erro quando registro não for encontrado (mostrar mensagem amigável).  
+- [ ] Adicionar botão “Registrar informações” (leva para formulário da Sprint 4).  
+
+---
+
+## 🟣 Sprint 4 – Envio de Informações
+
+### Épico: Contribuição cidadã
+**Histórias de usuário:**
+- Como cidadão, quero registrar informações sobre uma pessoa desaparecida para ajudar a investigação.  
+- Como cidadão, quero anexar fotos e indicar localização para facilitar a identificação.  
+
+**Tarefas técnicas:**
+- [ ] Criar página **Enviar Informações** (`/detalhes/:id/registrar`).  
+- [ ] Criar formulário com campos:  
+- Observações (textarea)  
+- Localização avistada (input texto ou mapa)  
+- Data (input com máscara `dd/mm/yyyy`)  
+- Telefone (máscara `(99) 99999-9999`)  
+- Upload de fotos (campo de upload com preview).  
+- [ ] Criar componente **FileUpload** (com preview de imagem).  
+- [ ] Implementar máscara de inputs com `react-input-mask` ou similar.  
+- [ ] Criar serviço `api.ts` para enviar dados (`POST /informacoes`).  
+- [ ] Exibir mensagem de **sucesso/erro** após envio.  
+
+---
+
+## 🔴 Sprint 5 – Qualidade e Deploy
+
+### Épico: Qualidade e publicação
+**Histórias de usuário:**
+- Como desenvolvedor, quero garantir que a aplicação seja responsiva e confiável antes de entregar.  
+- Como equipe, queremos disponibilizar o projeto em Docker e documentado no GitHub.  
+
+**Tarefas técnicas:**
+- [ ] Testar aplicação em diferentes resoluções (mobile, tablet, desktop).  
+- [ ] Adicionar **loading states** (spinners, skeletons).  
+- [ ] Adicionar mensagens de erro mais amigáveis (ex.: "Nenhum registro encontrado").  
+- [ ] Rodar build no Docker e validar ambiente (`docker build`, `docker run`).  
+- [ ] Revisar código e padrões (lint, imports, nomes de variáveis).  
+- [ ] Criar documentação final no **README.md**:  
+- Dados do candidato.  
+- Passo a passo para rodar localmente.  
+- Passo a passo para rodar com Docker.  
+- Endpoints da API utilizados.  
+- [ ] Publicar repositório no **GitHub público**.  
+
+---
