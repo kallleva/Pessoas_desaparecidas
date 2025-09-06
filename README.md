@@ -47,5 +47,5 @@ Objetivo da aplicação:
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/seu-usuario/desaparecidos-spa.git
+git clone https://github.com/kallleva/Pessoas_desaparecidas.git
 cd desaparecidos-spa
