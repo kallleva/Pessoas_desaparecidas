@@ -49,3 +49,8 @@ Objetivo da aplicação:
 ```bash
 git clone https://github.com/kallleva/Pessoas_desaparecidas.git
 cd desaparecidos-spa
+
+
+Não sou muito com front-end, mas tentei fazer o melhor possivel. para manter o prazo, algumas coisas ficaram faltando, como estive com pouco tempo, mas esse e o melhor que consegui fazer. 
+
+```

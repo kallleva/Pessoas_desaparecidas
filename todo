@@ -42,14 +42,14 @@ Cada Sprint está quebrada em **épicos, histórias de usuário e tarefas técni
 - Como cidadão, quero buscar por nome ou filtros para encontrar uma ocorrência específica.  
 
 **Tarefas técnicas:**
-- [ ] Criar página **Home** (`/`).  
-- [ ] Criar componente **CardPessoa** (foto, nome, status).  
-- [ ] Criar componente **StatusBadge** (verde para Localizado, vermelho para Desaparecido).  
-- [ ] Criar componente **Pagination** com mínimo de 10 registros por página.  
-- [ ] Criar componente **SearchBar** integrado com a API.  
-- [ ] Criar serviço `api.ts` com **axios** configurado (baseURL, interceptors de erro).  
-- [ ] Integrar **listagem com API real** (`GET /pessoas`).  
-- [ ] Tratar erros de API (mensagens de fallback).  
+- [X] Criar página **Home** (`/`).  
+- [X] Criar componente **CardPessoa** (foto, nome, status).  
+- [X] Criar componente **StatusBadge** (verde para Localizado, vermelho para Desaparecido).  
+- [X] Criar componente **Pagination** com mínimo de 10 registros por página.  
+- [X] Criar componente **SearchBar** integrado com a API.  
+- [X] Criar serviço `api.ts` com **axios** configurado (baseURL, interceptors de erro).  
+- [X] Integrar **listagem com API real** (`GET /pessoas`).  
+- [X] Tratar erros de API (mensagens de fallback).  
 
 ---
 
@@ -61,7 +61,7 @@ Cada Sprint está quebrada em **épicos, histórias de usuário e tarefas técni
 - Como cidadão, quero entender facilmente o status da pessoa (Desaparecida ou Localizada).  
 
 **Tarefas técnicas:**
-- [ ] Criar página **Detalhes** (`/detalhes/:id`).  
+- [X] Criar página **Detalhes** (`/detalhes/:id`).  
 - [ ] Criar hook `useFetchDetalhePessoa(id)` para buscar dados da API.  
 - [ ] Criar componente **DetalhePessoaCard** (foto, nome, idade, descrição, status, data, contatos).  
 - [ ] Destacar visualmente o **status da pessoa**.  
